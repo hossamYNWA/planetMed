@@ -1,3 +1,250 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
+    /*! margin-left: 15px; */
+}
+
+main {
+    height: 80%;
+    background-color: transparent;
+    width: 100vw;
+}
+
 nav {
-    color: red
+    width: 100%;
+    background-color: #389b2f;
+    height: 30px;
+    padding: 0 10%;
+}
+
+nav button {
+    float: right;
+    background-color: transparent;
+    border: 0;
+    font-size: 0.7em;
+    font-weight: bold;
+    color: whitesmoke;
+    margin: 7px 10px;
+}
+
+main div.container {
+    background-image: url('./doctors-bg.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 385px;
+    filter: blur(3px);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main div.welcome {
+    width: 100%;
+    height: 385px;
+    position: absolute;
+    top: 30px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+main div.big-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff80;
+    height: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 10%;
+}
+
+main div.big-nav ul {
+    list-style: none;
+}
+
+main div.big-nav ul li {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: .8em;
+    color: #1f2220;
+}
+
+.big-nav>p:nth-child(1) {
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: #16660e;
+}
+
+main .appoint {
+    border: 0;
+    height: 30px;
+    background-color: #ea5252;
+    color: whitesmoke;
+    width: 90px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.8em;
+    transition: all ease-in-out 0.3s;
+}
+
+
+main img {
+    position: absolute;
+    top: 10px;
+    width: 424px;
+    right: -30px;
+    z-index: 1;
+    filter: grayscale(0.4);
+    transition: all ease-in-out 0.3s;
+}
+
+
+main h1 {
+    margin: 50px 2% 0;
+    padding: 0 10%;
+    width: 75%;
+    height: fit-content;
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.56), 6px 0px 8px rgba(247, 247, 247, 0.08);
+    font-size: 3.5em;
+    color: #2d312d;
+    transition: all ease-in-out 0.3s;
+}
+
+main .appoint2 {
+    margin: 20px 20%;
+    width: 240px;
+    height: 60px;
+    border-radius: 20px;
+    border: 0;
+    background-color: #389b2f;
+    color: whitesmoke;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: all ease-in-out 0.3s;
+}
+
+button {
+    cursor: pointer;
+    transition: all ease 0.25s;
+}
+
+button:active {
+    transform: scaleX(.98);
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.msg {
+    margin-top: -40px;
+    position: relative;
+    height: fit-content;
+}
+
+.msg img {
+    width: 40%;
+}
+
+
+.msg p {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 45%;
+    font-size: 2em;
+    color: #389b2f;
+    transition: all ease-in-out 0.3s;
+    padding-right: 5%;
+}
+
+footer {
+    width: 80%;
+    height: auto;
+    border-top: 2px solid green;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.3em;
+    color: black;
+    position: absolute;
+}
+
+.fa-facebook {
+    color: #4267B2;
+}
+
+.fa-square-twitter {
+    color: #1DA1F2;
+}
+
+.fa-instagram {
+    color: #C13584;
+}
+
+
+
+
+@media (max-width:610px) {
+    main img {
+        opacity: 0;
+    }
+
+    main h1 {
+        font-size: 1.6em;
+    }
+
+    .big-nav>p:nth-child(1) {
+        width: 100%;
+        font-size: 1em;
+        letter-spacing: -1px;
+        color: #16660e;
+    }
+
+    main .appoint {
+        height: 25px;
+        width: 66px;
+        font-size: 0.6em;
+        margin-left: 80%;
+    }
+
+    main div.big-nav ul li {
+        font-size: 0.6em;
+        margin: 3px;
+    }
+
+    main .appoint2 {
+        height: 50px;
+        font-size: 0.9em;
+        margin-left: 14%;
+    }
+
+    .msg img {
+        opacity: 0;
+    }
+
+    .msg p {
+        font-size: 1em;
+        left: 15%;
+    }
+
+}
+
+@media (max-width:350px) {
+    .msg p {
+        font-size: 0.5em;
+        left: 15%;
+        top: 70%;
+    }
+
+    footer {
+        font-size: 0.6em;
+        bottom: 3px
+    }
 }
